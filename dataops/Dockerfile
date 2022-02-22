@@ -11,6 +11,10 @@ COPY requirements.txt requirements-${PLATFORM}.tx[t] .
 RUN pip install -r requirements.txt && \
     pip install -r requirements-${PLATFORM}.txt
 
+# Add gitlab.com as known host for dp publish command
+RUN mkdir /root/.ssh && \
+    ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
+
 RUN if [ "$PLATFORM" = "gcp" ]; then \
     wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz && \
     tar zxvf google-cloud-sdk.tar.gz && ./google-cloud-sdk/install.sh --usage-reporting=false --path-update=true && \
