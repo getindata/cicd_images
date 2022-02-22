@@ -14,7 +14,8 @@ RUN pip install -r requirements.txt && \
 RUN if [ "$PLATFORM" = "gcp" ]; then \
     wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz && \
     tar zxvf google-cloud-sdk.tar.gz && ./google-cloud-sdk/install.sh --usage-reporting=false --path-update=true && \
-    export PATH=$PATH:$PWD/google-cloud-sdk/bin/:/usr/local/bin/ && \
     rm -rf google-cloud-sdk.tar.gz ; \
-    fi \
+    fi
+
+ENV PATH=$PATH:$PWD/google-cloud-sdk/bin/:/usr/local/bin/
 
