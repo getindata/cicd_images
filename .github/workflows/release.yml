@@ -1,4 +1,4 @@
-name: Build & Publish Jupyterlab Image
+name: Build & Publish cicd images
 
 on:
   push:
