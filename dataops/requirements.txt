@@ -1,2 +1,2 @@
-data-pipelines-cli[docker,datahub,gcs,git,looker]==0.22.1
+git+https://github.com/getindata/data-pipelines-cli.git@airbyte-integration#egg=data_pipelines_cli
 MarkupSafe==2.0.1
