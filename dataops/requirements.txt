@@ -1,2 +1,2 @@
-data-pipelines-cli[docker,datahub,gcs,git]==0.22.0
+data-pipelines-cli[docker,datahub,gcs,git,looker]==0.22.1
 MarkupSafe==2.0.1
