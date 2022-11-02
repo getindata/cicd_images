@@ -1,2 +1,2 @@
-data-pipelines-cli[docker,datahub,gcs,git,looker]==0.23.0
+data-pipelines-cli[docker,datahub,git,snowflake,s3]==0.23.0
 MarkupSafe==2.0.1
