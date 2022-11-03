@@ -1,2 +1,2 @@
-git+https://github.com/getindata/data-pipelines-cli.git@oidc-auth#egg=data_pipelines_cli[docker,datahub,gcs,git]
+git+https://github.com/getindata/data-pipelines-cli.git@oidc-auth#egg=data_pipelines_cli[docker,datahub,gcs,git,looker]
 MarkupSafe==2.0.1
