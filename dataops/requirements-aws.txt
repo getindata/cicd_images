@@ -1,2 +1,2 @@
-awscli==1.27.2
+awscli==1.27.32
 data-pipelines-cli[docker,datahub,s3,git,looker,dbt-all]==0.24.0
