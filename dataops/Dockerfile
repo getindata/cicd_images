@@ -20,7 +20,7 @@ RUN wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz && \
 ENV PATH=$PATH:$PWD/google-cloud-sdk/bin/:/usr/local/bin/
 
 FROM base as aws
-RUN apt-get install awscli
+RUN apt-get install awscli -y
 ENV PATH=$PATH:~/.local/bin
 COPY requirements-aws.txt ./
 RUN pip install -r requirements-aws.txt
