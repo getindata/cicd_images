@@ -7,17 +7,15 @@ RUN apt-get update && \
 RUN mkdir /root/.ssh && \
     ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
 
-# Update python and install packages
-COPY requirements.txt ./
-RUN pip install --upgrade pip setuptools wheel --no-cache-dir \
-  -r requirements.txt
+# Update python
+RUN pip install --upgrade pip setuptools wheel --no-cache-dir
 
 FROM base as gcp
 COPY requirements-gcp.txt ./
 RUN pip install -r requirements-gcp.txt
 RUN wget https://dl.google.com/dl/cloudsdk/release/google-cloud-sdk.tar.gz && \
     tar zxvf google-cloud-sdk.tar.gz && ./google-cloud-sdk/install.sh --usage-reporting=false --path-update=true && \
-    rm -rf google-cloud-sdk.tar.gz 
+    rm -rf google-cloud-sdk.tar.gz
 
 ENV PATH=$PATH:$PWD/google-cloud-sdk/bin/:/usr/local/bin/
 
