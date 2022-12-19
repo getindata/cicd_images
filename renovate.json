@@ -43,11 +43,8 @@
                 "patch",
                 "digest"
             ],
-            "automerge": true,
+            "automerge": false,
             "automergeType": "branch"
         }
-    ],
-    "pip_requirements": {
-        "fileMatch": ["(^|/)([\\w-]*)requirements(^|/)([\\w-]*).(txt|pip)$"]
-      }
-  }
+    ]
+}
