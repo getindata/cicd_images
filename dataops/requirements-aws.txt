@@ -1,2 +1,1 @@
-awscli==1.27.2
-data-pipelines-cli[docker,datahub,s3,git,looker,snowflake]==0.23.0
+data-pipelines-cli[docker,datahub,s3,git,looker,dbt-all]==0.24.0
