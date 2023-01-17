@@ -1,7 +1,7 @@
 FROM python:3.8-slim as base
 
 RUN apt-get update && \
-    apt-get install ca-certificates openssl wget docker.io -y
+    apt-get install ca-certificates openssl wget docker.io jq -y
 
 # Add gitlab.com as known host for dp publish command
 RUN mkdir /root/.ssh && \
