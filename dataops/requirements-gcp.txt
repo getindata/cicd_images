@@ -1,1 +1,1 @@
-data-pipelines-cli[docker,datahub,gcs,git,looker,dbt-all]==0.24.1
+data-pipelines-cli[docker,datahub,gcs,git,looker,dbt-all]==0.25.1
