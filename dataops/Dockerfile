@@ -1,4 +1,4 @@
-FROM python:3.8-slim as base
+FROM python:3.10 as base
 
 RUN apt-get update && \
     apt-get install ca-certificates openssl wget docker.io jq -y
@@ -24,3 +24,7 @@ RUN apt-get install awscli -y
 ENV PATH=$PATH:~/.local/bin
 COPY requirements-aws.txt ./
 RUN pip install -r requirements-aws.txt
+
+FROM base as onprem
+COPY requirements-onprem.txt ./
+RUN pip install -r requirements-onprem.txt
