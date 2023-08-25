@@ -4,8 +4,7 @@ RUN apt-get update && \
     apt-get install ca-certificates openssl wget docker.io jq -y
 
 # Add gitlab.com as known host for dp publish command
-RUN mkdir /root/.ssh && \
-    ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
+RUN ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
 
 # Update python
 RUN pip install --upgrade pip setuptools wheel --no-cache-dir
