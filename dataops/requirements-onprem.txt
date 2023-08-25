@@ -1,1 +1,1 @@
-data-pipelines-cli[docker,datahub,git,dbt-all]==0.25.1
+data-pipelines-cli[docker,datahub,git,dbt-all]==0.26.0
