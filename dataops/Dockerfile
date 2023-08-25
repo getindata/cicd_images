@@ -5,8 +5,8 @@ RUN apt-get update && \
 # Add gitlab.com as known host for dp publish command
 RUN ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
 
-# Update python
-RUN pip install --upgrade pip setuptools wheel --no-cache-dir
+# # Update python
+# RUN pip install --upgrade pip setuptools wheel --no-cache-dir
 
 FROM base as gcp
 COPY requirements-gcp.txt ./
@@ -19,9 +19,10 @@ ENV PATH=$PATH:$PWD/google-cloud-sdk/bin/:/usr/local/bin/
 
 FROM base as aws
 RUN apt-get install awscli -y
-ENV PATH=$PATH:~/.local/bin
+# ENV PATH=$PATH:~/.local/bin
 COPY requirements-aws.txt ./
 RUN pip install -r requirements-aws.txt
+
 
 FROM base as onprem
 COPY requirements-onprem.txt ./
