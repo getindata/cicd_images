@@ -5,8 +5,8 @@ RUN apt-get update && \
 # Add gitlab.com as known host for dp publish command
 RUN ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
 
-# # Update python
-# RUN pip install --upgrade pip setuptools wheel --no-cache-dir
+# Update python
+RUN pip install --upgrade pip setuptools wheel --no-cache-dir
 
 FROM base as gcp
 COPY requirements-gcp.txt ./
