@@ -20,8 +20,9 @@ ENV PATH=$PATH:$PWD/google-cloud-sdk/bin/:/usr/local/bin/
 FROM base as aws
 RUN apt-get install awscli -y
 # ENV PATH=$PATH:~/.local/bin
-COPY requirements-aws.txt ./
-RUN pip install -r requirements-aws.txt
+# COPY requirements-aws.txt ./
+RUN pip install data-pipelines-cli[docker,datahub,s3,git,looker,dbt-all]==0.26.0
+
 
 
 FROM base as onprem
