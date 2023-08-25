@@ -6,7 +6,7 @@ RUN apt-get update && \
 RUN ssh-keyscan -t rsa gitlab.com >> ~/.ssh/known_hosts
 
 # Update python
-RUN pip install --upgrade pip setuptools wheel --no-cache-dir
+# RUN pip install --upgrade pip setuptools wheel --no-cache-dir
 
 FROM base as gcp
 COPY requirements-gcp.txt ./
