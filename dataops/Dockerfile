@@ -1,4 +1,4 @@
-FROM python:3.10 as base
+FROM python:3.12 as base
 
 RUN apt-get update && \
     apt-get install ca-certificates openssl wget docker.io jq -y
