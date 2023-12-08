@@ -1,1 +1,2 @@
 data-pipelines-cli[docker,datahub,s3,git,looker,snowflake,glue]==0.27.0
+pyspark[session]==3.5.0
